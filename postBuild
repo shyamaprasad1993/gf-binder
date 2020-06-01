@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl https://www.grammaticalframework.org/download/gf_3.10-2_amd64.deb -o /tmp/gf_3.10-2_amd64.deb
+dpkg -i /tmp/gf_3.10-2_amd64.deb
+rm -f /tmp/gf_3.10-2_amd64.deb
