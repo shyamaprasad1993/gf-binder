@@ -14,3 +14,4 @@ RUN pip install gf_kernel && \
 RUN mkdir tutorial
 RUN wget -O ./tutorial/Tutorial.ipynb https://raw.githubusercontent.com/KWARC/gf_kernel/master/tutorial/Tutorial.ipynb
 RUN wget -O ./tutorial/ExampleGer.gf https://raw.githubusercontent.com/KWARC/gf_kernel/master/tutorial/ExampleGer.gf
+COPY notebooks /home/jovyan/notebooks
