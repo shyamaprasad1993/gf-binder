@@ -19,6 +19,8 @@ Just press the icon above! Note that your changes or any new notebooks you creat
 
 The examples are from the grammar in `notebooks/Example.ipynb`.
 
+Note that in the Jupyter GF kernel, you need to specify the category with `-cat=<name>`, unless the category is called `S`. Easiest way is just to always call the top category S.
+
 ### parse
 Short form `p`. Example:  
 `p -lang=Eng "John loves Mary"`
@@ -71,7 +73,17 @@ Generates 5 random trees (of start category), linearizes to all languages.
 Geneerates a random tree of category NP.
 
 ### generate_trees
-Short form `gt`. Generates all trees of the grammar (up to certain depth). Example:
+Short form `gt`. Generates all trees of the grammar (up to certain depth). 
+
+Note that in the Jupyter GF kernel, you need to specify the category with `-cat=<name>`, unless the category is `S`.
+
+Examples:
+
+`gt -cat=NP | l`  
+Generates all trees of type NP, linearizes them in all languages.
 
 `gt | l -lang=Eng`  
-Generates all trees, linearizes them in English.
+Generates all trees (of type S), linearizes them in English.
+
+
+
