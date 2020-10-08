@@ -1,7 +1,7 @@
 FROM jupyter/base-notebook:notebook-6.0.3
 USER root
 RUN apt-get update && \
-    apt-get install --yes --no-install-recommends graphviz git gcc python-dev && \
+    apt-get install --yes --no-install-recommends graphviz git gcc python-dev libffi6 libtinfo5 && \
     wget -O /tmp/gf_3.10-2_amd64.deb https://www.grammaticalframework.org/download/gf_3.10-2_amd64.deb && \
     sudo dpkg -i /tmp/gf_3.10-2_amd64.deb && \
     rm -f "/tmp/gf_3.10-2_amd64.deb" && \
